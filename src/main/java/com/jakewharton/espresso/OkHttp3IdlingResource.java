@@ -15,6 +15,8 @@
  */
 package com.jakewharton.espresso;
 
+import android.support.annotation.CheckResult;
+import android.support.annotation.NonNull;
 import android.support.test.espresso.IdlingResource;
 import okhttp3.Dispatcher;
 import okhttp3.OkHttpClient;
@@ -25,7 +27,9 @@ public final class OkHttp3IdlingResource implements IdlingResource {
    * Create a new {@link IdlingResource} from {@code client} as {@code name}. You must register
    * this instance using {@code Espresso.registerIdlingResources}.
    */
-  public static OkHttp3IdlingResource create(String name, OkHttpClient client) {
+  @CheckResult @NonNull
+  @SuppressWarnings("ConstantConditions") // Extra guards as a library.
+  public static OkHttp3IdlingResource create(@NonNull String name, @NonNull OkHttpClient client) {
     if (name == null) throw new NullPointerException("name == null");
     if (client == null) throw new NullPointerException("client == null");
     return new OkHttp3IdlingResource(name, client.dispatcher());
