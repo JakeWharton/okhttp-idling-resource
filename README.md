@@ -8,14 +8,24 @@ An Espresso `IdlingResource` for OkHttp.
 Usage
 -----
 
-TODO
+With your `OkHttpClient` instance, create an idling resource:
+```java
+OkHttpClient client = // ...
+IdlingResource resource = OkHttp3IdlingResource.create("OkHttp", client);
+```
+
+Register the idling resource with `Espresso` before any of your tests.
+```java
+Espresso.registerIdlingResources(resource);
+```
 
 
 
 Download
 --------
 
-Note: This project has not yet been released and is only available as a snapshot.
+Note: This project only works with the unreleased OkHttp 3.4.0-SNAPSHOT and has not yet itself been
+released and is only available as a snapshot.
 
 ```groovy
 compile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0-SNAPSHOT'

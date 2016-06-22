@@ -19,10 +19,12 @@ import android.support.test.espresso.IdlingResource;
 import okhttp3.Dispatcher;
 import okhttp3.OkHttpClient;
 
-/**
- *
- */
+/** An {@link IdlingResource) for {@link OkHttpClient}. */
 public final class OkHttp3IdlingResource implements IdlingResource {
+  /**
+   * Create a new {@link IdlingResource} from {@code client} as {@code name}. You must register
+   * this instance using {@code Espresso.registerIdlingResources}.
+   */
   public static OkHttp3IdlingResource create(String name, OkHttpClient client) {
     if (name == null) throw new NullPointerException("name == null");
     if (client == null) throw new NullPointerException("client == null");
