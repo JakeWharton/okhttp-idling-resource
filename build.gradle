@@ -1,0 +1,44 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.1.0'
+  }
+}
+
+apply plugin: 'com.android.library'
+
+repositories {
+  mavenCentral()
+  maven {
+    url 'https://oss.sonatype.org/content/repositories/snapshots/'
+  }
+}
+
+dependencies {
+  compile 'com.squareup.okhttp3:okhttp:3.4.0-SNAPSHOT'
+  compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
+
+  testCompile 'junit:junit:4.12'
+  testCompile 'com.google.truth:truth:0.28'
+  testCompile 'com.squareup.okhttp3:mockwebserver:3.4.0-SNAPSHOT'
+}
+
+android {
+  compileSdkVersion 24
+  buildToolsVersion '24.0.0'
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
+  }
+
+  lintOptions {
+    textReport true
+    textOutput 'stdout'
+    ignore 'InvalidPackage'
+  }
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
