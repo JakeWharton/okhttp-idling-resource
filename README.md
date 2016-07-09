@@ -24,8 +24,7 @@ Espresso.registerIdlingResources(resource);
 Download
 --------
 
-Note: This project only works with the unreleased OkHttp 3.4.0-SNAPSHOT and has not yet itself been
-released and is only available as a snapshot.
+Note: This project has not yet itself been released and is only available as a snapshot.
 
 ```groovy
 compile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0-SNAPSHOT'
