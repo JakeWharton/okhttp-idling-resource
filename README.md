@@ -25,7 +25,7 @@ Download
 --------
 
 ```groovy
-compile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
+androidTestCompile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
 ```
 
 Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
