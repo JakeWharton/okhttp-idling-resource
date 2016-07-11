@@ -24,10 +24,8 @@ Espresso.registerIdlingResources(resource);
 Download
 --------
 
-Note: This project has not yet itself been released and is only available as a snapshot.
-
 ```groovy
-compile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0-SNAPSHOT'
+compile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
 ```
 
 Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
