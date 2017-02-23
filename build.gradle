@@ -1,9 +1,9 @@
 buildscript {
   repositories {
-    mavenCentral()
+    jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.1.2'
+    classpath 'com.android.tools.build:gradle:2.2.3'
   }
 }
 
@@ -14,18 +14,18 @@ repositories {
 }
 
 dependencies {
-  compile 'com.squareup.okhttp3:okhttp:3.4.1'
+  compile 'com.squareup.okhttp3:okhttp:3.6.0'
   compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
-  compile 'com.android.support:support-annotations:24.0.0'
+  compile 'com.android.support:support-annotations:25.1.1'
 
   testCompile 'junit:junit:4.12'
   testCompile 'com.google.truth:truth:0.28'
-  testCompile 'com.squareup.okhttp3:mockwebserver:3.4.1'
+  testCompile 'com.squareup.okhttp3:mockwebserver:3.6.0'
 }
 
 android {
-  compileSdkVersion 24
-  buildToolsVersion '24.0.0'
+  compileSdkVersion 25
+  buildToolsVersion '25.0.2'
 
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_7
