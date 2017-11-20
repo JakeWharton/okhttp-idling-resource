@@ -15,13 +15,13 @@ repositories {
 }
 
 dependencies {
-  compile 'com.squareup.okhttp3:okhttp:3.9.0'
-  compile 'com.android.support.test.espresso:espresso-idling-resource:3.0.1'
-  compile 'com.android.support:support-annotations:27.0.1'
+  api 'com.squareup.okhttp3:okhttp:3.9.0'
+  api 'com.android.support.test.espresso:espresso-idling-resource:3.0.1'
+  implementation 'com.android.support:support-annotations:27.0.1'
 
-  testCompile 'junit:junit:4.12'
-  testCompile 'com.google.truth:truth:0.34'
-  testCompile 'com.squareup.okhttp3:mockwebserver:3.9.0'
+  testImplementation 'junit:junit:4.12'
+  testImplementation 'com.google.truth:truth:0.34'
+  testImplementation 'com.squareup.okhttp3:mockwebserver:3.9.0'
 }
 
 android {
