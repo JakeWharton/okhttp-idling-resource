@@ -10,13 +10,14 @@ buildscript {
 apply plugin: 'com.android.library'
 
 repositories {
+  google()
   mavenCentral()
 }
 
 dependencies {
   compile 'com.squareup.okhttp3:okhttp:3.9.0'
   compile 'com.android.support.test.espresso:espresso-idling-resource:3.0.1'
-  compile 'com.android.support:support-annotations:27.1.1'
+  compile 'com.android.support:support-annotations:27.0.1'
 
   testCompile 'junit:junit:4.12'
   testCompile 'com.google.truth:truth:0.34'
