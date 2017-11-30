@@ -1,31 +1,33 @@
 buildscript {
   repositories {
+    google()
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.3'
+    classpath 'com.android.tools.build:gradle:3.0.0'
   }
 }
 
 apply plugin: 'com.android.library'
 
 repositories {
+  google()
   mavenCentral()
 }
 
 dependencies {
-  compile 'com.squareup.okhttp3:okhttp:3.6.0'
-  compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
-  compile 'com.android.support:support-annotations:25.1.1'
+  api 'com.squareup.okhttp3:okhttp:3.9.0'
+  api 'com.android.support.test.espresso:espresso-idling-resource:3.0.1'
+  implementation 'com.android.support:support-annotations:27.0.1'
 
-  testCompile 'junit:junit:4.12'
-  testCompile 'com.google.truth:truth:0.28'
-  testCompile 'com.squareup.okhttp3:mockwebserver:3.6.0'
+  testImplementation 'junit:junit:4.12'
+  testImplementation 'com.google.truth:truth:0.34'
+  testImplementation 'com.squareup.okhttp3:mockwebserver:3.9.0'
 }
 
 android {
-  compileSdkVersion 25
-  buildToolsVersion '25.0.2'
+  compileSdkVersion 26
+  buildToolsVersion '26.0.2'
 
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_7
