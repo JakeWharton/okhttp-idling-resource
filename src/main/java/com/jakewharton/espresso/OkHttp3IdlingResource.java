@@ -57,7 +57,9 @@ public final class OkHttp3IdlingResource implements IdlingResource {
   }
 
   @Override public boolean isIdleNow() {
-    return dispatcher.runningCallsCount() == 0;
+    boolean idle = (dispatcher.runningCallsCount() == 0);
+    if (idle && callback != null) callback.onTransitionToIdle();
+    return idle;
   }
 
   @Override public void registerIdleTransitionCallback(ResourceCallback callback) {
