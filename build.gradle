@@ -4,7 +4,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.android.tools.build:gradle:3.5.3'
   }
 }
 
@@ -13,12 +13,13 @@ apply plugin: 'com.android.library'
 repositories {
   google()
   mavenCentral()
+  jcenter()
 }
 
 dependencies {
   api 'com.squareup.okhttp3:okhttp:3.9.0'
-  api 'com.android.support.test.espresso:espresso-idling-resource:3.0.1'
-  implementation 'com.android.support:support-annotations:27.0.1'
+  api 'androidx.test.espresso:espresso-idling-resource:3.2.0'
+  implementation 'androidx.annotation:annotation:1.1.0'
 
   testImplementation 'junit:junit:4.12'
   testImplementation 'com.google.truth:truth:0.34'
@@ -26,8 +27,12 @@ dependencies {
 }
 
 android {
-  compileSdkVersion 26
-  buildToolsVersion '26.0.2'
+  compileSdkVersion 28
+
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion 28
+  }
 
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_7
