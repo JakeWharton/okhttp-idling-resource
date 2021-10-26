@@ -23,7 +23,7 @@ Espresso.registerIdlingResources(resource);
 
 Download
 --------
-Groovy
+
 ```groovy
 androidTestImplementation 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
 ```
