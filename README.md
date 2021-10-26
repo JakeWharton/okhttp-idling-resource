@@ -25,11 +25,6 @@ Download
 --------
 Groovy
 ```groovy
-androidTestCompile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
-```
-
-Kotlin
-```kotlin
 androidTestImplementation 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
 ```
 
